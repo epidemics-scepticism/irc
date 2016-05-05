@@ -233,7 +233,7 @@ func nickMsg(m *Msg) {
 }
 
 func noticeMsg(m *Msg) {
-	if !ircClean {
+	if !*ircClean {
 		s := "[" + m.timestamp + "]"
 		s += " [" + ansiColour("Yellow", m.nick) + "@" + ansiColour("Yellow", m.rcpt) + "]"
 		s += " " + ansiColour("Yellow", m.cmd) + ":"
@@ -257,7 +257,7 @@ func errorMsg(m *Msg) {
 }
 
 func partMsg(m *Msg) {
-	if !ircClean {
+	if !*ircClean {
 		s := "[" + m.timestamp + "]"
 		s += " " + m.nick + " [" + m.user + "@" + m.host + "]" + " has left " + m.rcpt + " [" + m.content + "]"
 		PrintLine(s)
@@ -265,7 +265,7 @@ func partMsg(m *Msg) {
 }
 
 func joinMsg(m *Msg) {
-	if !ircClean {
+	if !*ircClean {
 		s := "[" + m.timestamp + "]"
 		s += " " + m.nick + " [" + m.user + "@" + m.host + "]" + " has joined "
 		if len(m.rcpt) > 0 {
@@ -278,7 +278,7 @@ func joinMsg(m *Msg) {
 }
 
 func quitMsg(m *Msg) {
-	if !ircClean {
+	if !*ircClean {
 		s := "[" + m.timestamp + "]"
 		s += " " + m.nick + " [" + m.user + "@" + m.host + "]" + " has quit [" + m.content + "]"
 		PrintLine(s)
