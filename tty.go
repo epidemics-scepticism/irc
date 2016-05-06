@@ -233,16 +233,14 @@ func nickMsg(m *Msg) {
 }
 
 func noticeMsg(m *Msg) {
-	if !*ircClean {
-		s := "[" + m.timestamp + "]"
-		s += " [" + ansiColour("Yellow", m.nick) + "@" + ansiColour("Yellow", m.rcpt) + "]"
-		s += " " + ansiColour("Yellow", m.cmd) + ":"
-		if len(m.args) > 0 {
-			s += " [" + ansiColour("Yellow", m.args) + "]"
-		}
-		s += " " + ansiColour("Yellow", m.content)
-		PrintLine(s)
+	s := "[" + m.timestamp + "]"
+	s += " [" + ansiColour("Yellow", m.nick) + "@" + ansiColour("Yellow", m.rcpt) + "]"
+	s += " " + ansiColour("Yellow", m.cmd) + ":"
+	if len(m.args) > 0 {
+		s += " [" + ansiColour("Yellow", m.args) + "]"
 	}
+	s += " " + ansiColour("Yellow", m.content)
+	PrintLine(s)
 }
 
 func errorMsg(m *Msg) {
