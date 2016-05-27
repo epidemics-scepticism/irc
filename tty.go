@@ -41,7 +41,7 @@ func PrintHelp() {
 	PrintLine("/otr-smpq <rcpt> <question>? <response> - Pose an SMP question (question must end with a ?)")
 	PrintLine("/raw <request> - Send a raw input line to the server")
 	PrintLine("/help - this screen!")
-	PrintLine("by default, message to sent to the previous user or channel")
+	PrintLine("by default, message are sent to the previous user or channel")
 }
 
 var (
