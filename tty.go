@@ -32,7 +32,7 @@ func PrintHelp() {
 	PrintLine("/nick <nick> - Change your nick")
 	PrintLine("/ctcp <rcpt> <msg> - CTCP a channel or user with msg")
 	PrintLine("/ignore <rcpt> - Ignore messages from rcpt")
-	PrintLine("/unignore <rcpt> - Unignmore rcpt")
+	PrintLine("/unignore <rcpt> - Unignore rcpt")
 	PrintLine("/otr-start <rcpt> - Request an OTR session with a user")
 	PrintLine("/otr-end <rcpt> - End an OTR session with a user")
 	PrintLine("/otr-status <rcpt> - Check the status of OTR with a user")
