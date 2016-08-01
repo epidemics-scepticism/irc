@@ -321,7 +321,7 @@ func updateTerm() {
 
 func PrintLine(line string) {
 	if t != nil {
-		t.Write([]byte(line + "\n"))
+		t.Write([]byte(line + "\r\n"))
 		updateTerm()
 	} else {
 		fmt.Fprintln(os.Stdout, line)
